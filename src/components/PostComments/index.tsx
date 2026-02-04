@@ -10,8 +10,8 @@ const Post = () => {
     function handleAddComment(event: FormEvent<HTMLFormElement>) {
         event.preventDefault();
         const newComment = new Comment(comments.length, tempComment);
-        setTempComment('');
         setComments([...comments, newComment]);
+        setTempComment('');
     }
 
     return (
