@@ -9,7 +9,7 @@ describe('Testes para o componente principal', () => {
 
     test('Deve adicionar 2 comentários', () => {
         render(<PostComments />)
-        fireEvent.change(screen.getByTestId('campo-comentarario'),
+        fireEvent.change(screen.getByTestId('campo-comentario'),
             { target: { value: 'Primeiro comentário' } })
     })
     fireEvent.click(screen.getByTestId('btn-comentar'))
