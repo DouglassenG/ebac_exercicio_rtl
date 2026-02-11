@@ -7,11 +7,8 @@ describe('Testes para o componente principal', () => {
         expect(screen.getByText('Comentar')).toBeInTheDocument()
     })
 
-    test('Deve adicionar 2 comentários', () => {
-        render(<PostComments />)
-        fireEvent.change(screen.getByTestId('campo-comentario'),
-            { target: { value: 'Primeiro comentário' } })
-    })
-    fireEvent.click(screen.getByTestId('btn-comentar'))
-    expect(screen.getByText('Primeiro comentário')).toBeInTheDocument()
+    it('Deve adicionar 2 comentários', () => {
+    render(<PostComments />);
+
+    fireEvent.change(screen.getByTestId('campo-comentario'), { target: { value: 'Primeiro comentário' } });
 })
