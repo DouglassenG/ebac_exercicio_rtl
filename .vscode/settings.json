@@ -1,8 +1,16 @@
 {
-    "testing.automaticallyOpenTestResults": "neverOpen",
-    "jest.outputConfig": {
-        "revealOn": "run",
-        "revealWithFocus": "none",
-        "clearOnRun": "none"
-    }
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // --- CONFIGURAÇÃO DE INDENTAÇÃO (NOVA) ---
+  "editor.tabSize": 2, // Define o tamanho para 2 espaços
+  "editor.insertSpaces": true, // Usa espaços em vez de TABs (padrão do JS moderno)
+  "editor.detectIndentation": false, // Força o VS Code a obedecer o seu 2, ignorando o arquivo
+  // ----------------------------------------
+
+  // DESLIGAR O ESLint temporariamente para que o Prettier possa funcionar
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.nodePath": "./node_modules"
 }
