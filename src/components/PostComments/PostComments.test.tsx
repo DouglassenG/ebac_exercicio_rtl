@@ -2,8 +2,12 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import PostComments from ".";
 
 describe("Testes para o componente principal", () => {
-  test("Deve renderizar corratamente", () => {
+    it('Deve renderizar corretamente o componente', () => {
+        render(<PostComments />);
+        expect(screen.getByTestId("Comentar")).toBeInTheDocument();
+  })  
+
+  it('Deve adicionar dois comentários', () => {
     render(<PostComments />);
-    expect(screen.getByText("Comentar")).toBeInTheDocument();
-  });
-});
+})
+
