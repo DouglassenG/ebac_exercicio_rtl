@@ -13,5 +13,12 @@ describe("Testes para o componente principal", () => {
       target: { value: "Primeiro comentário" },
     });
     fireEvent.click(screen.getByTestId("btn-comentar"));
+
+    fireEvent.change(screen.getByTestId("campo-comentario"), {
+      target: { value: "Segundo comentário" },
+    });
+    fireEvent.click(screen.getByTestId("btn-comentar"));
+
+    expect(screen.getAllByTestId("elemento-comentario")).toHaveLength(2);
   });
 });
