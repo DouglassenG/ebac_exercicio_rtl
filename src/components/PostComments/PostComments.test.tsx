@@ -4,7 +4,7 @@ import PostComments from ".";
 describe("Testes para o componente principal", () => {
   it("Deve renderizar corretamente o componente", () => {
     render(<PostComments />);
-    expect(screen.getByTestId("Comentar")).toBeInTheDocument();
+    expect(screen.getByText("Comentar")).toBeInTheDocument();
   });
 
   it("Deve adicionar dois comentários", () => {
